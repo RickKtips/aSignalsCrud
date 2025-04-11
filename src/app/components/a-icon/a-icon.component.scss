@@ -1,0 +1,20 @@
+@use 'variaveis.scss' as v;
+div{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-wrap: nowrap;
+   cursor: pointer;
+   span{
+       margin: 0 5px;
+       font-size: 1.5rem;
+       color: v.$cor-primaria;
+       line-height: 2.7em;
+       transition:color 1s ease;
+   }
+   &:hover{
+       span{
+           color: v.$cor-secundaria;
+       }
+   }
+}

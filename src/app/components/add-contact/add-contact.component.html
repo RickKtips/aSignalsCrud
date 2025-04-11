@@ -1,0 +1,28 @@
+<header class="header"><h1>Novo Contato</h1></header>
+
+<p>Preencha os detalhes do contato abaixo:</p>
+<form (ngSubmit)="save()" #contactForm="ngForm" >
+    <div class="inputD">
+        <label  for="name">Nome</label>
+        <input type="text" name="name" class="question" id="name" [(ngModel)]="name" required />
+    </div>
+
+    <div class="inputD">
+        <label for="email" >Email:</label>
+        <input type="email" id="email"  name="email" [(ngModel)]="email" required>
+    </div>
+
+    <div class="inputD">
+        <label for="phone">Telefone:</label>
+        <input type="text" id="phone" name="phone" [(ngModel)]="phone" required>
+    </div>
+<nav>
+    <button routerLink="/" type="button">
+        <aIcon [icon]="'undo'" [texto]="'Voltar'"></aIcon>
+    </button>
+    <button type="submit"><aIcon [icon]="'add'" [texto]="'Criar Contato'"></aIcon></button>
+</nav>
+</form>
+@if(saving()) { 
+    <loader [loading]="saving()"></loader>
+     } 

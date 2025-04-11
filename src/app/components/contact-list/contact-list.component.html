@@ -1,0 +1,20 @@
+<header class="header"><h1>Contatos</h1><aIcon routerLink="/new" [icon]="'add'" [texto]="''" title="Novo Contato"></aIcon></header>
+
+@for(contact of contactsResource.value(); track contact.id) {
+  <section class="card">
+    <header>
+    <h2>{{ contact.name }}</h2>
+  </header>
+    <p>Email: {{ contact.email }}</p>
+    <p>Phone: {{ contact.phone }}</p>
+    <nav>
+      <aIcon [icon]="'edit'" [texto]="'Editar'" routerLink="/edit/{{ contact.id }}"></aIcon>
+      <aIcon [icon]="'delete'" [texto]="'Remover'" (click)="deleteContact(contact.id)"></aIcon>
+    </nav>
+  </section>
+}
+
+@if(loading()) { 
+  <loader [loading]="loading()"></loader>
+  } 
+

@@ -1,0 +1,11 @@
+<div
+(mouseover)="play()"
+(mouseleave)="stop()"
+title="{{ texto() }}"
+>
+<ng-lottie [options]="options()"
+ (animationCreated)="animationCreated($event)"
+ width="40px"
+ height="40px"></ng-lottie>
+<span>{{ texto() }}</span>
+</div>

@@ -1,0 +1,12 @@
+<div
+class="loaderCont"
+[class.loading]="loadingC()"
+>
+<ng-lottie [options]="options()"
+ (animationCreated)="animationCreated($event)"
+ width="150px"
+ height="150px"
+ class="loaderIco"
+ [class.loadingIco]="loadingC()"
+ ></ng-lottie>
+</div>

@@ -1,0 +1,18 @@
+@use 'variaveis.scss' as v;
+
+section{
+    font-size: 1.5em;
+    ul{list-style: none;
+    li{margin-bottom: 1em;
+    }
+    }
+
+    strong{font-weight: 700;}
+    a{
+        color: v.$cor-primaria;
+        text-decoration: none;
+        &:hover{
+            color: v.$cor-secundaria;
+        }
+    }
+}

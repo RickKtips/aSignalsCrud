@@ -1,0 +1,26 @@
+@use 'variaveis.scss' as v;
+:host{
+    padding: 10px;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+width: 100%;
+min-height: 100vh;
+
+    .container{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width:600px;
+    border-radius:v.$border-radius; 
+    background-color: v.$cor-contraste;
+    box-shadow: v.$shadow1;
+
+    div{
+        padding: 2em; width: 100%;
+    }
+    }
+}

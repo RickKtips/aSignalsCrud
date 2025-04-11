@@ -1,0 +1,74 @@
+@use 'variaveis.scss' as v;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition-duration: 0.001s !important;
+  }
+}
+
+@keyframes background-move {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 100vw 0, 0 0;
+    background-position: max(100vw, 40em) 0, 0 0;
+  }
+}
+.inputD {
+  width: 100%;
+  max-width: 60em;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+margin: 2em 0;
+
+label {
+  padding: 0 0.5em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  color: v.$cor-fundo;
+  color: rgba( v.$cor-neutra,1);
+  cursor: pointer;
+}
+input {
+  color: v.$cor-neutra;
+  font-size: 1.8rem;
+  line-height: 1;
+  border-style: none;
+  outline: none;
+  height: 4em;
+  width: 100%;
+  padding: 0em 1em;
+  border: 0.25em solid transparent;
+  background-image: linear-gradient(v.$cor-contraste, v.$cor-contraste), linear-gradient(120deg, v.$cor-primaria 0%, v.$cor-secundaria 50%, v.$cor-3 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: 1em;
+  background-size: 200% 100%;
+  transition: background-position 0.8s ease-out;
+}
+input:hover {
+  background-position: 100% 0;
+}
+input:focus {
+  outline: 2px dashed v.$cor-primaria;
+  outline-offset: 0.5em;
+}
+
+}
+
+@supports (mix-blend-mode: darken) {
+  .inputD {
+    position: relative;
+    // mix-blend-mode: lighten;
+  }
+  label {
+    position: absolute;
+    left: 3em;
+    top: -0.28em;
+    background: v.$cor-fundo;
+  }
+}

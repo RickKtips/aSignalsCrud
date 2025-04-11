@@ -1,0 +1,51 @@
+@use 'variaveis.scss' as v;
+
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeInIco {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+ 
+.loaderCont{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: nowrap;
+position:fixed;
+z-index: 1000;
+top: 0;
+left: 0;
+height:100vh;
+width: 100vw;
+background-color: rgba(v.$cor-primaria,0.5);
+backdrop-filter: blur(5px);
+opacity: 0.2;
+&.loading{
+    opacity:1;
+    animation: 1s fadeIn;
+}
+
+}
+
+.loaderIco{
+    opacity: 0;
+    &.loadingIco{
+        opacity: 1;
+        animation: 1.5s fadeInIco;
+    }
+}

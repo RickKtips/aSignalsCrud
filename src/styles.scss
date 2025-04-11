@@ -1,1 +1,149 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'variaveis.scss' as v;
+@use 'forms.scss' as f;
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+html, body {
+  margin: 0;
+  font-size: 10px;
+  background: linear-gradient(100deg, #402, #006);
+  padding: 2em;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: v.$cor-neutra;
+  background-color: #ffffff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 460 55'%3E%3Cg fill='none' fill-rule='evenodd' stroke='%23fff' stroke-width='7' opacity='.1'%3E%3Cpath d='M-345 34.5s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 48.3 0 48.3s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 20.7s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 34.5 0 34.5s115-13.8 115-13.8S172.5 6.9 230 6.9s115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8m-920 27.6s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 62.1 0 62.1s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3Cpath d='M-345 6.9s57.5-13.8 115-13.8S-115 6.9-115 6.9-57.5 20.7 0 20.7 115 6.9 115 6.9 172.5-6.9 230-6.9 345 6.9 345 6.9s57.5 13.8 115 13.8S575 6.9 575 6.9'/%3E%3Cpath d='M-345-6.9s57.5-13.8 115-13.8S-115-6.9-115-6.9-57.5 6.9 0 6.9 115-6.9 115-6.9s57.5-13.8 115-13.8S345-6.9 345-6.9 402.5 6.9 460 6.9 575-6.9 575-6.9m-920 69s57.5-13.8 115-13.8 115 13.8 115 13.8S-57.5 75.9 0 75.9s115-13.8 115-13.8 57.5-13.8 115-13.8 115 13.8 115 13.8 57.5 13.8 115 13.8 115-13.8 115-13.8'/%3E%3C/g%3E%3C/svg%3E%0A"), linear-gradient(80deg, #202, #006);
+  background-position: 50% 50%;
+  animation: background-move 10s linear infinite;
+  background-size: 100vw auto, 100% 100%;
+  background-size: max(100vw, 30em) auto, 100% 100%;
+}
+
+*{
+  font-family: "Red Hat Display", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+    font-style: normal;
+  box-sizing: border-box;
+
+}
+
+h1{
+  font-size: 2.5em;
+  font-weight: 700;
+
+  }
+h2{
+  font-size: 1.5em;
+  margin: 0 0 30px;
+}
+
+.header{
+  padding:1em; width: 100%;
+  display: flex; flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+color: v.$cor-primaria;
+border-bottom: v.$border;
+margin-bottom: 2em;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap; position: relative;
+
+    padding: 20px;
+    border-radius:v.$border-radius; 
+    background-color: v.$cor-contraste;
+    box-shadow: v.$shadow1;
+    margin: 0 0 20px 0;
+    border: v.$border;
+    p{
+      font-size: 1.5em;
+      margin: 0 0 20px 0;
+      font-weight: 500;
+    }
+    header{
+      font-size: 2em;
+      font-weight: 700;
+    }
+    nav{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      width: 100%;
+      padding: 10px 0 0;
+
+    }
+}
+
+.logo{
+    min-width: 50px;
+    min-height: 50px;
+    margin: 0;
+    display: flex;
+    background-image: v.$logo-principal;
+    background-size: contain;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.8em;
+  min-width: 400px;
+color: v.$cor-contraste;
+
+.executando{
+  background-color: v.$cor-contraste;
+  color: v.$cor-primaria;
+}
+  thead th {
+    background-color: v.$cor-primaria;
+    color: v.$cor-contraste;
+    text-align: left;
+  }
+
+  th,
+  td {
+      padding: 12px 15px;
+  }
+
+tbody
+{
+   tr {
+    border-bottom: 1px solid v.$cor-contraste;
+    &:nth-of-type(even) {
+      background-color: v.$cor-primaria;
+    }
+    &:last-of-type {
+      border-bottom: 2px solid v.$cor-primaria;
+    }
+    &:hover {
+      font-weight: bold;
+      background-color: v.$cor-primaria;
+    }
+  }
+}
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  &-thumb {
+    background: rgba(v.$cor-primaria, 0.5);
+    border-radius: 10px;
+  }
+ &-track {
+    background: transparent;
+  } 
+}
+
+button{
+  background: transparent;
+  border: none;
+  line-height: 30px;
+}

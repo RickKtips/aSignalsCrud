@@ -1,59 +1,32 @@
 # ASignalsCrud
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.6.
+ - Sistema com as operações essenciais no desenvolvimento de sistemas, criado na versão 19.2.6. e usando as novas diretivas e Signals e derivados para a latência dos dados.
 
-## Development server
+ - Componentizado
 
-To start a local development server, run:
+ - Tematização 100% em scss, sem necessidade de nenhuma biblioteca externa para formatação do layout.
+
+ - Responsivo, via tagueamento correto e flexbox, a estrutura simples e direta tambem dispensou o uso de media queries(que seriam usadas caso necessário)
+
+ - Icones no formato json animados e integrados ao projeto, componentizado de forma a facilitar o uso e manter a funcionalidade sempre coesa.
+
+ - Simulador de serviço para facilitar o teste, com delay intencional e configurável, a fim de simular as views de loading, animadas 100% via css
+
+Para rodar o projeto: 
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+A url de destino é a `http://localhost:4200/`. copie e cole no navegador, ou ctrl+click no terminal
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+os testes são os padrões, confesso que não me aprofundei muito, pra rodar é o:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
 
-For end-to-end (e2e) testing, run:
+mais informações na pagineta (https://angular.dev/tools/cli), ou no google, ou na sua IA favorita.
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+vamo que vamo. =)
