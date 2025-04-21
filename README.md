@@ -1,4 +1,4 @@
-Funcionando aqui: <a href="https://a-signals-crud-o8al7z1aq-rickktips-projects.vercel.app/"> https://a-signals-crud-o8al7z1aq-rickktips-projects.vercel.app/</a>
+Funcionando aqui: <a href="https://a-signals-crud-o8al7z1aq-rickktips-projects.vercel.app/" target="_blank"> https://a-signals-crud-o8al7z1aq-rickktips-projects.vercel.app/</a>
 # ASignalsCrud
 
  - Sistema com as operações essenciais no desenvolvimento de sistemas, criado na versão 19.2.6. e usando as novas diretivas e Signals e derivados para a latência dos dados.
