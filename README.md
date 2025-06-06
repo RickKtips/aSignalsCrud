@@ -1,5 +1,17 @@
 Funcionando aqui: <a href="https://a-signals-crud-o8al7z1aq-rickktips-projects.vercel.app/" target="_blank"> https://a-signals-crud-o8al7z1aq-rickktips-projects.vercel.app/</a>
 # ASignalsCrud
+--UPDATE
+
+```bash
+feat/form-validation 
+```
+ - adicionado na branch acima a validação dos campos, essa validação foi criada para testar a nova ferramenta de desenvolvimento do google, Jules.
+ - Jules (https://jules.google.com/) é uma IA com prompt, que lê direto daqui do git, e após sua confirmação cria uma branch nova com a feature
+ - funciona bem mas precisa de acompanhamento, precisei pedir pra refazer as diretivas citando a versão, depois retornei para pedir a validação tambem nos botões de confirmação, e tambem fiz alguns ajustes manuais nos testes
+ - mas a IA é boa tá? opa!
+  
+
+-- Cabô UPDATE
 
  - Sistema com as operações essenciais no desenvolvimento de sistemas, criado na versão 19.2.6. e usando as novas diretivas e Signals e derivados para a latência dos dados.
 
