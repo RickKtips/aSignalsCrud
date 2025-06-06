@@ -5,31 +5,55 @@
     <div class="inputD">
         <label  for="name">Nome</label>
         <input type="text" name="name" class="question" id="name" [(ngModel)]="name" #nameCtrl="ngModel" required minlength="2" maxlength="50" />
-        <div *ngIf="nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)" class="error-messages">
-            <div *ngIf="nameCtrl.errors?.['required']">Nome é obrigatório.</div>
-            <div *ngIf="nameCtrl.errors?.['minlength']">Nome deve ter pelo menos 2 caracteres.</div>
-            <div *ngIf="nameCtrl.errors?.['maxlength']">Nome não pode exceder 50 caracteres.</div>
-        </div>
+        @if (nameCtrl.invalid && (nameCtrl.dirty || nameCtrl.touched)) {
+          <div class="error-messages">
+            @if (nameCtrl.errors?.['required']) {
+              <div>Nome é obrigatório.</div>
+            }
+            @if (nameCtrl.errors?.['minlength']) {
+              <div>Nome deve ter pelo menos 2 caracteres.</div>
+            }
+            @if (nameCtrl.errors?.['maxlength']) {
+              <div>Nome não pode exceder 50 caracteres.</div>
+            }
+          </div>
+        }
     </div>
 
     <div class="inputD">
         <label for="email" >Email:</label>
         <input type="email" id="email"  name="email" [(ngModel)]="email" #emailCtrl="ngModel" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-        <div *ngIf="emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)" class="error-messages">
-            <div *ngIf="emailCtrl.errors?.['required']">Email é obrigatório.</div>
-            <div *ngIf="emailCtrl.errors?.['pattern']">Formato de email inválido.</div>
-        </div>
+        @if (emailCtrl.invalid && (emailCtrl.dirty || emailCtrl.touched)) {
+          <div class="error-messages">
+            @if (emailCtrl.errors?.['required']) {
+              <div>Email é obrigatório.</div>
+            }
+            @if (emailCtrl.errors?.['pattern']) {
+              <div>Formato de email inválido.</div>
+            }
+          </div>
+        }
     </div>
 
     <div class="inputD">
         <label for="phone">Telefone:</label>
         <input type="tel" id="phone" name="phone" [(ngModel)]="phone" #phoneCtrl="ngModel" required minlength="10" maxlength="15" pattern="^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$">
-        <div *ngIf="phoneCtrl.invalid && (phoneCtrl.dirty || phoneCtrl.touched)" class="error-messages">
-            <div *ngIf="phoneCtrl.errors?.['required']">Telefone é obrigatório.</div>
-            <div *ngIf="phoneCtrl.errors?.['minlength']">Telefone deve ter pelo menos 10 dígitos.</div>
-            <div *ngIf="phoneCtrl.errors?.['maxlength']">Telefone não pode exceder 15 dígitos.</div>
-            <div *ngIf="phoneCtrl.errors?.['pattern']">Formato de telefone inválido.</div>
-        </div>
+        @if (phoneCtrl.invalid && (phoneCtrl.dirty || phoneCtrl.touched)) {
+          <div class="error-messages">
+            @if (phoneCtrl.errors?.['required']) {
+              <div>Telefone é obrigatório.</div>
+            }
+            @if (phoneCtrl.errors?.['minlength']) {
+              <div>Telefone deve ter pelo menos 10 dígitos.</div>
+            }
+            @if (phoneCtrl.errors?.['maxlength']) {
+              <div>Telefone não pode exceder 15 dígitos.</div>
+            }
+            @if (phoneCtrl.errors?.['pattern']) {
+              <div>Formato de telefone inválido.</div>
+            }
+          </div>
+        }
     </div>
 <nav>
     <button routerLink="/" type="button">
