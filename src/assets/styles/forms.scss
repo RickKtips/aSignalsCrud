@@ -72,3 +72,19 @@ input:focus {
     background: v.$cor-fundo;
   }
 }
+
+.error-messages {
+  color: v.$cor-falha;
+  font-size: 0.9em;
+  margin-top: 0.5em;
+  padding-left: 0.5em;
+
+  div {
+    margin-top: 0.2em;
+  }
+}
+
+input.ng-invalid.ng-touched {
+  border-color: v.$cor-falha;
+  // e.g., box-shadow: 0 0 0.25em v.$cor-falha;
+}
