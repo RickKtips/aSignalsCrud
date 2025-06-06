@@ -1,6 +1,6 @@
-import { Component, computed, inject, input, linkedSignal, resource, signal } from '@angular/core';
+import { Component, computed, inject, input, linkedSignal, resource, signal, ViewChild } from '@angular/core';
 import { ApiService } from '../../services/api.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink, Router } from '@angular/router';
 import { AIconComponent } from '../a-icon/a-icon.component';
 import { LoadingComponent } from '../loading/loading.component';
@@ -12,6 +12,7 @@ import { LoadingComponent } from '../loading/loading.component';
   styleUrl: './edit-contact.component.scss'
 })
 export class EditContactComponent {
+  @ViewChild('contactForm') contactForm!: NgForm;
 id = input.required<string>();
 
 apiService = inject(ApiService);
@@ -31,6 +32,11 @@ contactResource = resource({
 });
 
 async save() {
+  if (this.contactForm && !this.contactForm.form.valid) {
+    // Optionally, log an error or notify the user
+    console.error('Attempted to save with an invalid form.');
+    return;
+  }
   this.saving.set(true);
   this.apiService.updateContact({
     id: this.id(),

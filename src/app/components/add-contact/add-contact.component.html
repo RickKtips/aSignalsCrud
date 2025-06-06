@@ -59,7 +59,7 @@
     <button routerLink="/" type="button">
         <aIcon [icon]="'undo'" [texto]="'Voltar'"></aIcon>
     </button>
-    <button type="submit"><aIcon [icon]="'add'" [texto]="'Criar Contato'"></aIcon></button>
+    <button type="submit" [disabled]="!contactForm.form.valid"><aIcon [icon]="'add'" [texto]="'Criar Contato'"></aIcon></button>
 </nav>
 </form>
 @if(saving()) { 
